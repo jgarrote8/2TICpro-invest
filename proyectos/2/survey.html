@@ -12,10 +12,8 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
   
-
-  <link rel="manifest" href="../site.webmanifest">
-  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="../../icon.png">
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="../../css/normalize.css">
@@ -29,10 +27,47 @@
           padding-left: clamp(2%, 3%, 5%);
           padding-right: clamp(2%, 3%, 5%);
       }
+      p{
+          font-size: 11pt;
+      }
+      table{
+          display: flex;
+          flex-flow: column nowrap;
+      }
+      section.index{
+        box-sizing: border-box;
+        padding: min(20px, 2%);
+      }
+      section.index a{
+          text-decoration: underline;
+          color: black;
+      }
   </style>
 </head>
 <body>
     <h1>Encuesta sobre el eje intestino-cerebro</h1>
+
+    <section class="index">
+        <h2>Índice</h2>
+            <ol>
+                <li><a href="#q1">En relación con la dieta, menciona el aspecto en tu dieta se centra especialmente</a></li><br>
+                <li><a href="#q2">Califica estas enfermedades según lo preocupado que estás por ellas (del 1 al 6)</a></li><br>
+                <li><a href="#q3">¿Sigues una dieta específica</a></li><br>
+                <li><a href="#q4">Marca la afirmación con la que estés más de acuerdo (apetito)</a></li><br>
+                <li><a href="#q5">Marca la afirmación con la que estés más de acuerdo (fibra)</a></li><br>
+                <li><a href="#q6">Nombra 3 alimentos que contengan fibra alimenticia</a></li><br>
+                <li><a href="#q7">Señala la importancia que le das a las proteínas en tu dieta</a></li><br>
+                <li><a href="#q8">Marca tu ingesta de frutas y verduras</a></li><br>
+                <li><a href="#q9">Marca tu ingesta de legumbres</a></li><br>
+                <li><a href="#q10">Marca tu ingesta de pescado</a></li><br>
+                <li><a href="#q11">¿Consumes productos con cereales integrales?</a></li><br>
+                <li><a href="#q12">Marca los alimentos que consumas a menudo (probióticos y prebióticos)</a></li>
+            </ol>
+    </section>
+
+    <section id="q1">
+        <!--Usar Chart.js https://www.chartjs.org/-->
+    </section>
     
 </body>
 </html>

@@ -24,13 +24,26 @@
 
   <style>
       body{
-          font-family: 'Times New Roman', Times, serif;
+          font-family: Arial, Helvetica, sans-serif;
           box-sizing: border-box;
           padding-left: clamp(2%, 3%, 5%);
           padding-right: clamp(2%, 3%, 5%);
       }
       p{
-          font-size: 1.2em;
+          font-size: 11pt;
+          text-indent: 0.5cm;
+          line-height: 2;
+      }
+      h1{
+          text-align: center;
+          font-size: 11pt;
+          font-weight: bold;
+      }
+      h2,h3{
+          font-size: 11pt;
+          text-align: left;
+          font-style: italic;
+          font-weight: bold;
       }
       section{
         box-sizing: border-box;
@@ -44,12 +57,20 @@
           color: black;
           text-decoration: none;
       }
+      span.italic{
+          font-style:italic;
+      }
   </style>
 </head>
 <body>
-    <h1>El eje intestino-cerebro</h1>
-    <section>
-        <h2>Introducción</h2>
+    <h1 style="padding-top: 1cm; font-size: 13pt;">El eje intestino-cerebro</h1>
+    <br>
+    <p style="text-align: center; line-height: normal;">Javier G.</p>
+    <p style="text-align: center; line-height: normal;">2º Bachillerato científico.</p>
+    <p style="text-align: center; line-height: normal;">Manuel N.</p>    
+    <p style="text-align: center; line-height: normal;">25 de febrero, 2021</p>
+    <section style="margin-top: 50px;">
+        <h1>Introducción</h1>
         <p>En los últimos años la producción científica acerca de la microbiota y su relación con
             diversas enfermedades se ha disparado, hecho que se ha observado también entre las
             enfermedades neurológicas. Fruto de estas investigaciones ha surgido el concepto del eje
@@ -109,32 +130,42 @@
             <p>Ante la complejidad que presenta el estudio de estos temas, destacan los resultados
                 de un estudio que arroja luz sobre los que podrían ser unos hábitos alimenticios saludables
                 que podrían ayudar a mejorar la calidad de vida de una forma sencilla.</p>
+            <p>El estudio en cuestión trata distintas áreas geográficas, denominadas “zonas azules” <sup><a href="#bib-9">9</a></sup>.
+                Estas son áreas geográficas limitadas en la que su población tiene una longevidad
+                excepcionalmente alta (individuos mayores de 90 años que son funcionalmente activos) y
+                no está en función de altos ingresos económicos o cuidados
+                sanitarios especializados.<sup><a href="#bib-10">10</a></sup> Entre las distintas variables que se analizan en el estudio se
+                encuentra la alimentación, que parece ser clave en la prevención de enfermedades
+                anteriormente mencionadas.</p>
     </section>
     <section>
-        <h2>Bibliografía</h2>
+        <h1>Bibliografía</h1>
         <ol>
-            <li id="bib-1">Castillo Álvarez, F., & Marzo Sola, M. E. (21 de Julio de 2019). Papel de la microbiota
-                intestinal en el desarrollo de diferentes enfermedades neurológicas. Science Direct.
+            <li id="bib-1">Castillo Álvarez, F., & Marzo Sola, M. E. (21 de Julio de 2019). <span class="italic">Papel de la microbiota
+                intestinal en el desarrollo de diferentes enfermedades neurológicas.</span> Science Direct.
                 Consultado el 22 de Octubre de 2020, desde
-                <a href="https://www.sciencedirect.com/science/article/pii/S0213485319300829">https://www.sciencedirect.com/science/article/pii/S0213485319300829</a></li><br>
-            <li id="bib-2">Caballero Torres, A. E., Fernández Vélez, Y. E. (30 de Abril de 2018). Asociaciones entre
-                alimentos, flora intestinal y sistema nervioso central. QhaliKay. Consultado el 22 de Octubre
-                de 2020, desde <a href="https://186.46.160.238/index.php/QhaliKay/article/view/1405">https://186.46.160.238/index.php/QhaliKay/article/view/1405</a></li><br>
-            <li id="bib-3">Nota técnica Encuesta Nacional de Salud en España 2017. (26 de Junio de 2018). Ministerio
-                de sanidad, consumo y bienestar social. Consultado el 29 de Octubre de 2020, desde <a href="https://www.mscbs.gob.es/estadEstudios/estadisticas/encuestaNacional/encuestaNac2017/ENSE2017_notatecnica.pdf">https://www.mscbs.gob.es/estadEstudios/estadisticas/encuestaNacional/encuestaNac2017/ENSE2017_notatecnica.pdf</a></li><br>
-            <li id="bib-4">Prevalencia de sobrepeso y obesidad en España en el informe “The heavy burden of obesity”
-                (OCDE 2019) y en otras fuentes de datos. (12 de Noviembre de 2019). Consultado el 29 de
-                Octubre de 2020, desde <a href="https://www.aesan.gob.es/AECOSAN/docs/documentos/nutricion/observatorio/Resumen_resultados_informe_OCD-NAOS.pdf">https://www.aesan.gob.es/AECOSAN/docs/documentos/nutricion/observatorio/Resumen_resultados_informe_OCD-NAOS.pdf</a></li><br>
-            <li id="bib-5">Pérez Menéndez, A. (21 de Septiembre de 2019). Nota de prensa del 19 de septiembre de
-                2019. Sociedad Española de Neurología. Consultado el 5 de Noviembre de 2020, desde <a href="https://www.sen.es/saladeprensa/pdf/Link280.pdf">https://www.sen.es/saladeprensa/pdf/Link280.pdf</a></li><br>
+                <a href="https://www.sciencedirect.com/science/article/pii/S0213485319300829">referencia</a></li><br>
+            <li id="bib-2">Caballero Torres, A. E., Fernández Vélez, Y. E. (30 de Abril de 2018). <span class="italic">Asociaciones entre
+                alimentos, flora intestinal y sistema nervioso central.</span> QhaliKay. Consultado el 22 de Octubre
+                de 2020, desde <a href="https://186.46.160.238/index.php/QhaliKay/article/view/1405">referencia</a></li><br>
+            <li id="bib-3"><span class="italic">Nota técnica Encuesta Nacional de Salud en España 2017.</span> (26 de Junio de 2018). Ministerio
+                de sanidad, consumo y bienestar social. Consultado el 29 de Octubre de 2020, desde <a href="https://www.mscbs.gob.es/estadEstudios/estadisticas/encuestaNacional/encuestaNac2017/ENSE2017_notatecnica.pdf">referencia</a></li><br>
+            <li id="bib-4"><span class="italic">Prevalencia de sobrepeso y obesidad en España en el informe “The heavy burden of obesity”
+                (OCDE 2019) y en otras fuentes de datos.</span> (12 de Noviembre de 2019). Consultado el 29 de
+                Octubre de 2020, desde <a href="https://www.aesan.gob.es/AECOSAN/docs/documentos/nutricion/observatorio/Resumen_resultados_informe_OCD-NAOS.pdf">referencia</a></li><br>
+            <li id="bib-5">Pérez Menéndez, A. (21 de Septiembre de 2019). <span class="italic">Nota de prensa del 19 de septiembre de
+                2019.</span> Sociedad Española de Neurología. Consultado el 5 de Noviembre de 2020, desde <a href="https://www.sen.es/saladeprensa/pdf/Link280.pdf">referencia</a></li><br>
             <li id="bib-6">Andreo Martínez, P., García Martínez, N., Quesada Medina, J., & Sánchez Samper, E. P. (1
-                de Enero de 2019). Candida spp. en la microbiota intestinal de las personas con autismo.
-                Universidad de Alicante. Consultado el 12 de Noviembre de 2020, desde <a href="http://rua.ua.es/dspace/handle/10045/88518">http://rua.ua.es/dspace/handle/10045/88518</a></li><br>
+                de Enero de 2019). <span class="italic">Candida spp. en la microbiota intestinal de las personas con autismo.</span>
+                Universidad de Alicante. Consultado el 12 de Noviembre de 2020, desde <a href="http://rua.ua.es/dspace/handle/10045/88518">referencia</a></li><br>
             <li id="bib-7">Royo Bordonada, M. Á., Rodríguez Artalejo, F., & Bes Rastrollo, M. (10 de Febrero de 2020).
-                Políticas alimentarias para prevenir la obesidad y las principales enfermedades no
-                transmisibles en España. SciELO. Consultado el 12 de Noviembre de 2020, desde <a href="https://www.scielosp.org/article/gs/2019.v33n6/584-592/">https://www.scielosp.org/article/gs/2019.v33n6/584-592/</a></li><br>
-            <li id="bib-8">Pascual Leone, A. M. (13 de Mayo de 2004). Eje cerebro-intestinal: orexinas. Real Academia
-                Nacional de Farmacia. Consultado el 12 de Noviembre de 2020, desde <a href="https://core.ac.uk/download/pdf/230312227.pdf">https://core.ac.uk/download/pdf/230312227.pdf</a></li>
+                <span class="italic">Políticas alimentarias para prevenir la obesidad y las principales enfermedades no
+                transmisibles en España.</span> SciELO. Consultado el 12 de Noviembre de 2020, desde <a href="https://www.scielosp.org/article/gs/2019.v33n6/584-592/">referencia</a></li><br>
+            <li id="bib-8">Pascual Leone, A. M. (13 de Mayo de 2004). <span class="italic">Eje cerebro-intestinal: orexinas.</span> Real Academia
+                Nacional de Farmacia. Consultado el 12 de Noviembre de 2020, desde <a href="https://core.ac.uk/download/pdf/230312227.pdf">referencia</a></li><br>
+                <li id="bib-9">Buettner, D. (2008). <span class="italic">The Blue Zones, 9 lessons for living longer from the people who've lived the longest (2nd ed.).</span> National Geographic. <a href="https://books.google.es/books?hl=es&lr=&id=fhJAn7fPkqAC&oi=fnd&pg=PR13&dq=blue+zones+&ots=XObmfKv1W9&sig=7Gwq9WArrzrUw29XmhbZi7iXb_4&redir_esc=y#v=onepage&q=blue%20zones&f=false">Referencia</a></li><br>
+            <li id="bib-10">Navarro Pardo, E. (2015). <span class="italic">¿Por qué nos interesan las zonas azules?</span> ResearchGate.
+                Consultado el 4 de Marzo de 2021, desde <a href="https://www.researchgate.net/profile/Esperanza-Navarro-Pardo/publication/283625085_Por_que_nos_interesan_las_Zonas_Azules/links/5641baa908aebaaea1f862f2/Por-que-nos-interesan-las-Zonas-Azules.pdf">referencia</a></li>
         </ol>
     </section>
 

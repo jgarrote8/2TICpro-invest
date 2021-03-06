@@ -1,1 +1,137 @@
-<!--Empty-->
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Proyectos</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  
+
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <script src="https://kit.fontawesome.com/64ba0acf7d.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/main.css">
+
+  <meta name="theme-color" content="#3ba83b">
+
+  <style>
+      span.print-alert{
+          display: none;
+      }
+      @media print{
+        header{
+            display: none;
+        }
+        div.nav-proyectos{
+            display: none;
+        }
+        footer{
+            display: none;
+        }
+        span.print-alert{
+            display: inline;
+        }
+      }
+      div.nav-proyectos{
+        display: flex;
+        flex-flow: row wrap;
+      }
+      div.nav-proyectos a{
+          text-decoration: none;
+          color: black;
+          display: flex;
+          width: 50%;
+          flex: 50%;
+      }
+      @media (hover: hover) {
+            div.nav-proyectos a:hover{
+                background-color: grey;
+                transition: 700ms ease;
+            }
+        }
+      div.nav-proyectos a div{
+          flex:50%;
+          width: 100%;
+          display: block;
+          text-align: center;   
+      }
+      div.nav-proyectos a div img{
+          width: 90%;
+          margin: 0 auto;
+      }
+      @media screen and (max-width: 767px){
+          div.nav-proyectos{
+              flex-flow: column nowrap;
+          }
+        div.nav-proyectos a{
+            flex: 100%;
+          width: 100%;
+        }
+        div.nav-proyectos a div{
+            flex: 100%;
+        }
+      }
+      @media screen and (min-width: 2000px){
+          div.nav-proyectos a{
+              width: 25%;
+              flex: 25%;
+          }
+          div.nav-proyectos a div{
+              width: 25%;
+              flex: 25%;
+          }
+      }
+  </style>
+</head>
+
+<body>
+    <header>
+      <span class="logo"><img srcset="../img/logo.png 145w, ../img/logo.webp 145w" sizes="65px" alt="logo"
+        style="box-sizing: border-box; padding: 0 15px 0 0;">Proyecto de investigación</span>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="../index.html#info">Asignatura</a>
+            <a href="../index.html#proyectos">Proyectos</a>
+        </nav>
+    </header>
+    <div class="nav-proyectos">
+        <a href="1/index.html"><div><h1>Aditivos alimentarios</h1><img src="../img/microbiota.jpg" alt="aditivos"><br><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quisquam, rerum cupiditate laboriosam sequi asperiores deserunt dolorem dolor similique eaque ratione eos architecto voluptates quis! Obcaecati a optio libero doloremque.</p></div></a>
+        <a href="2/index.html"><div><h1>El eje intestino-cerebro</h1><img src="../img/microbiota.jpg" alt="microbiota"><br><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quisquam, rerum cupiditate laboriosam sequi asperiores deserunt dolorem dolor similique eaque ratione eos architecto voluptates quis! Obcaecati a optio libero doloremque.</p></div></a>
+        <a href="3/index.html"><div><h1>Religión</h1><img src="../img/microbiota.jpg" alt="religión"><br><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quisquam, rerum cupiditate laboriosam sequi asperiores deserunt dolorem dolor similique eaque ratione eos architecto voluptates quis! Obcaecati a optio libero doloremque.</p></div></a>
+        <a href="4/index.html"><div><h1>Música</h1><img src="../img/microbiota.jpg" alt="música"><br><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quisquam, rerum cupiditate laboriosam sequi asperiores deserunt dolorem dolor similique eaque ratione eos architecto voluptates quis! Obcaecati a optio libero doloremque.</p></div></a>
+    </div>
+
+    <footer>
+        <div>
+          <p>Página web creada en la asignatura de "Tecnologías de la información y la comunicación (TIC)" por Javier Garrote. Asignatura impartida por Mariló Anaya durante el curso 2020/21 en el IES Maestro Juan Calero.</p>
+            
+          <p>La asignatura sobre la que se habla en la web es "Proyecto de investigación", que puede cursarse en 2º de bachillerato en ambas modalidades.</p>
+        </div>
+        <div>
+          <h1 style="font-size:1.17em;">Más información:</h1>
+          <nav>
+            - <a href="../about/index.html">¿Cómo se ha hecho esta página?</a><br><br>
+            - <a href="../folleto.pdf">Folleto informativo de la asignatura "Proyecto de investigación"</a><br><br>
+            - <a href="https://iesmjuancalero.educarex.es/index.php/departamentos/88889017-uncategorised/122-departamento-de-biologisa-y-geologisa">Criterios de calificación y programación de esta asignatura (dentro del departamento de biología)</a><br><br>
+            - <a href="../about/creditos.html">Créditos: imágenes e iconos</a>
+          </nav>
+        </div>
+      </footer>
+    <span class="print-alert">Esta página no está adaptada al formato impresión, por eso no puede imprimirse.</span>
+      <!--Fin del contenido-->
+  <script src="../js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="../js/plugins.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

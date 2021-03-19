@@ -24,6 +24,25 @@
   <link rel="stylesheet" href="../css/main.css">
 
   <meta name="theme-color" content="#3ba83b">
+  <style>
+    a.github{
+        text-decoration: none;
+        display: flex;
+        flex-flow: row nowrap;
+        flex: 100%;
+        width: 100%!important;
+        color: grey;
+        box-sizing: border-box;
+        padding: 15px 30px;
+        border-top: 2px solid grey;
+        border-bottom: solid 2px grey;
+    }
+    a.github:hover{
+        background-color: grey;
+        color: white;
+        transition: 300ms ease;
+    }
+  </style>
 </head>
 <body>
     <header>
@@ -37,6 +56,9 @@
     </header>
 
     <h1>¿Cómo se ha creado esta página web?</h1>
+
+<a href="https://github.com/jgarrote8/2TICpro-invest" class="github"><i class="fab fa-github" style="font-size: 20px;"></i> &nbsp; &nbsp; Ver repositorio en Github</a>
+
     <section>
       <p>En los siguientes puntos se destacan algunas de las implementaciones más destacables en este sitio web.</p>
     </section>
@@ -56,18 +78,88 @@
                 <source srcset="#" type="image/webp">                     -->
             <img src="img/html-css.jpg" alt="imagen usando la etiqueta picture para los formatos AVIF, WebP y PNG." style="float: left; margin: 0 15px 15px 0; max-width: 200px;">
         </picture>
-        <p>Para crear este sitio web desde cero se han utilizado los lenguajes de programación HTML y CSS. </p>
+        <p>Para crear este sitio web desde cero se han utilizado los lenguajes de programación HTML, CSS y Javascript. </p>
         <p>Además de eso se han utilizado varias librerías para simplificar ciertos trabajos que hubieran sido bastante tediosos y también algunas integraciones. Las librerias de código abierto e integraciones que se han utilizado son <a href="https://necolas.github.io/normalize.css/">Normalize</a>, <a href="https://html5boilerplate.com/">HTML5 Boilerplate</a>, <a href="https://fontawesome.com/">Font Awesome</a>, <a href="https://webpack.js.org/">Webpack</a>, <a href="https://modernizr.com/">Modernizr</a> y <a href="https://www.chartjs.org/">ChartJS</a>. Lo que han aportado estas librerías a la web está mencionado en apartados posteriores.</p>
     </section><br>
 
     <section id="propiedades-destacadas">
       <h2>2. Propiedades utilizadas a destacar</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur incidunt saepe hic sit, laboriosam fuga minima eaque ratione, corrupti, autem eos veniam eveniet? Ut iure ex reiciendis veritatis, ea saepe?</p>
+      <p>De entre todas las propiedades de los lenguajes de programación que se han utilizado en esta página podemos destacar las que más impacto tienen. En concreto destaca el uso de dos CSS layouts.</p>
       <h3>2.1 CSS flexbox</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia deleniti delectus repudiandae tempora odio assumenda eligendi eos ipsam. Ab consequatur illum delectus cumque obcaecati tenetur quidem impedit ullam repellendus?</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus modi laboriosam earum cum, ipsam autem dicta aliquam, minima dignissimos deserunt eos iure assumenda ea animi. Maxime quasi aliquam dolorem dolor.</p>
-      <h3>2.2 CSS Grid</h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil nulla deserunt maiores perspiciatis aliquam saepe pariatur debitis, ex laboriosam quia nobis omnis alias excepturi voluptas maxime quisquam consequuntur amet beatae!</p>
+      <p>"Flexbox es un método de diseño de página unidimensional para compaginar elementos en filas o columnas. Los elementos de contenido se ensanchan para rellenar el espacio adicional y se encogen para caber en espacios más pequeños." - <a href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Flexbox">referencia en MDN</a>.</p>
+      <p>Las propiedades de Flexbox facilitan mucho el hecho de que las páginas web sean compatibles con cualquier dispositivo, además de sustituir a otras propiedades más problemáticas que podrían causar problemas en distintos dispositivos (como CSS float). De esta manera, los elementos de la página que estás viendo ahora mismo están hechos a medida para tu dispositivo. ¡Flexbox es tan útil que incluso en las aplicaciones móviles se utiliza! Puedes ver cómo se integra en aplicaciones nativas de Android <a href="https://github.com/google/flexbox-layout">aquí</a>.</p> 
+      <p> Observa los siguientes ejemplos:</p>
+      <div style="display: flex; flex-flow: row nowrap; justify-content: space-between;">
+        <div style="flex: 45%; margin-right: 20px; display: flex; flex-flow: row wrap; justify-content: space-between; background-color: black; box-sizing: border-box; padding: 20px;">
+            <div style="display: flex; justify-content: center; align-items: center; font-size: 2em; flex: 20%; box-sizing: border-box; padding: 30px; background-color: yellow; text-align: center;margin-right: 5px;">1</div>
+            <div style="display: flex; justify-content: center; align-items: center; font-size: 2em; flex: 32%; box-sizing: border-box; padding: 30px; background-color: yellow; text-align: center;margin-right: 5px;">2</div>
+            <div style="display: flex; justify-content: center; align-items: center; font-size: 2em; flex: 15%; box-sizing: border-box; padding: 30px; background-color: yellow; text-align: center;">3</div>
+            <div style="display: flex; justify-content: center; align-items: center; font-size: 2em; flex: 50%; box-sizing: border-box; padding: 30px; background-color: yellowgreen; text-align: center; margin-top: 5px;">4</div>
+        </div>
+        <div style="flex: 45%; background-color: black; box-sizing: border-box; padding: 20px;">
+          <div style="font-size: 2em; width: 20%; box-sizing: border-box; padding: 30px; background-color: yellow; text-align: center;margin-right: 5px;">1</div>
+          <div style="font-size: 2em; width: 32%; box-sizing: border-box; padding: 30px; background-color: yellow; text-align: center;margin-right: 5px;">2</div>
+          <div style="font-size: 2em; width: 15%; box-sizing: border-box; padding: 30px; background-color: yellow; text-align: center;">3</div>
+          <div style="font-size: 2em; width: 50%; box-sizing: border-box; padding: 30px; background-color: yellowgreen; text-align: center; margin-top: 5px;">4</div>
+      </div>
+      </div>
+      <p>En los dos ejemplos de arriba hay 4 cajas dentro de un contenedor, en el primer caso las cajas están en un contenedor Flexbox y en el segundo caso (derecha) están en un contenedor sin especificar la propiedad "display: flex", por tanto tomará el valor por defecto "display: block". Si redimensionas la ventana del navegador podrás comprobar que en ambos ejemplos las cajas de colores cambian su tamaño, aunque no de la misma manera.</p>
+      <p>Esto sería lo que define el ancho de las cajas de colores en el primer ejemplo:</p>
+        <div style="display: flex; flex-flow: column nowrap; justify-content: space-around; background-color: lightgrey; box-sizing: border-box; padding: 10px 20px; line-height: 0.2;">
+          <p>div div{</p>
+          <p> &nbsp; flex: 20%;</p>
+          <p>}</p>
+        </div>
+      <p>Podemos usar esta propiedad ya que el contenedor padre es flexible (Flexbox). Las cajas que hay en su interior pueden redimensionarse <strong>usando como referencia el ancho del contenedor que antecede al contenedor padre, en este caso la página entera (body)</strong>. Además si estableciésemos otras propiedades también podríamos determinar en las proporciones en la que crecen por lo que tenemos total control sobre ello.</p>
+      <p>Por otro lado, esta es la propiedad que define el ancho de las cajas de colores en el segundo ejemplo:</p>
+        <div style="display: flex; flex-flow: column nowrap; justify-content: space-around; background-color: lightgrey; box-sizing: border-box; padding: 10px 20px; line-height: 0.2;">
+          <p>div div{</p>
+          <p> &nbsp; width: 20%;</p>
+          <p>}</p>
+        </div>
+    <p>Se toma como referencia el ancho del contenedor padre. Si quisiéramos conseguir el mismo tamaño que en el primer ejemplo, tendríamos que añadir más ancho a cada contenedor y se descuadrarían las medidas dando problemas de desborde de página en ciertos anchos de pantalla (sobre todo en móviles). Por supuesto sería aún mucho más complicado que la página se adaptase a todos los dispositivos si las cajas tuviesen un ancho fijo.</p>
+    <p>Flexbox cuenta con varias propiedades bastante útiles para reducir errores en las páginas y conseguir ahorrar líneas de código, sobre todo en proyectos más complejos. Aunque el funcionamiento de sus propiedades puede llegar a resultar más confuso que otras propiedades como CSS float o margin, sus resultados merecen la pena.</p>
+    <p>En el ejemplo del contenedor flexible también se puede observar como las cajas se distribuyen uniformemente ocupando todo el espacio disponible. Es más, si redimensionaste la ventana habrás comprobado que la colocación de las mismas varía según el ancho de pantalla. Los dos ejemplos que están más abajo tienen exactamente el mismo código, solo varía el ancho del contenedor padre:</p>
+    <div style="display: flex; flex-flow: row nowrap; justify-content: space-between;">
+      <div style="flex: 20%; margin-right: 20px; display: flex; flex-flow: row wrap; justify-content: space-between; background-color: black; box-sizing: border-box; padding: 20px;">
+          <div style="display: flex; justify-content: center; align-items: center; font-size: 2em; flex: 10%; box-sizing: border-box; padding: 30px; background-color: yellow; text-align: center;margin-right: 5px;">1</div>
+          <div style="display: flex; justify-content: center; align-items: center; font-size: 2em; flex: 10%; box-sizing: border-box; padding: 30px; background-color: yellow; text-align: center;margin-right: 5px;">2</div>
+          <div style="display: flex; justify-content: center; align-items: center; font-size: 2em; flex: 10%; box-sizing: border-box; padding: 30px; background-color: yellow; text-align: center;">3</div>
+          <div style="margin-right: 15px; display: flex; justify-content: center; align-items: center; font-size: 2em; flex: 10%; box-sizing: border-box; padding: 30px; background-color: yellowgreen; text-align: center; margin-top: 5px;">4</div>
+          <div style="display: flex; justify-content: center; align-items: center; font-size: 2em; flex: 10%; box-sizing: border-box; padding: 30px; background-color: yellowgreen; text-align: center; margin-top: 5px;">5</div>
+        </div>
+        <div style="flex: 70%; margin-right: 20px; display: flex; flex-flow: row wrap; justify-content: space-between; background-color: black; box-sizing: border-box; padding: 20px;">
+          <div style="display: flex; justify-content: center; align-items: center; font-size: 2em; flex: 25%; box-sizing: border-box; padding: 30px; background-color: yellow; text-align: center;margin-right: 5px;">1</div>
+          <div style="display: flex; justify-content: center; align-items: center; font-size: 2em; flex: 25%; box-sizing: border-box; padding: 30px; background-color: yellow; text-align: center;margin-right: 5px;">2</div>
+          <div style="display: flex; justify-content: center; align-items: center; font-size: 2em; flex: 25%; box-sizing: border-box; padding: 30px; background-color: yellow; text-align: center;">3</div>
+          <div style="margin-right: 5px; display: flex; justify-content: center; align-items: center; font-size: 2em; flex: 25%; box-sizing: border-box; padding: 30px; background-color: yellowgreen; text-align: center; margin-top: 5px;">4</div>
+          <div style="display: flex; justify-content: center; align-items: center; font-size: 2em; flex: 25%; box-sizing: border-box; padding: 30px; background-color: yellowgreen; text-align: center; margin-top: 5px;">5</div>
+      </div>
+      </div>
+    <p>Al redimensionar la ventana, las cajas van cambiando de posición para no colapsar el contenedor padre. Esto se debe a la propiedad "flex-wrap: wrap;". Este es el código CSS (relacionado con Flexbox) de cada una de las cajas en el primer ejemplo:</p>
+      <div style="display: flex; flex-flow: column nowrap; justify-content: space-around; background-color: lightgrey; box-sizing: border-box; padding: 10px 20px; line-height: 0.2;">
+        <p>div div{</p>
+        <p> &nbsp; display: flex;</p>
+        <p> &nbsp; justify-content: center;</p>
+        <p> &nbsp; align-items: center;</p>
+        <p> &nbsp; flex: 10%;</p>
+        <p>}</p>
+      </div>
+    <p>Y el código de los contenedores padre (relacionado con Flexbox):</p>
+      <div style="display: flex; flex-flow: column nowrap; justify-content: space-around; background-color: lightgrey; box-sizing: border-box; padding: 10px 20px; line-height: 0.2;">
+        <p>div{</p>
+        <p> &nbsp; display: flex;</p>
+        <p> &nbsp; justify-content: space-between;</p>
+        <p> &nbsp; flex-direction: row;</p>
+        <p> &nbsp; flex-wrap: wrap;</p>
+        <p>}</p>
+      </div>
+    <p>Todas estas propiedades se usan constantemente en este proyecto. Puedes consultar todas las propiedades del layout de CSS Flexbox en <a href="https://www.w3schools.com/css/css3_flexbox_container.asp">W3schools</a> o con más detalle en la última especificación hasta la fecha de <a href="https://www.w3.org/TR/css-flexbox-1/">W3C</a>.</p>
+
+    <h3>2.2 CSS Grid</h3>
+      <p>Flexbox es muy ventajoso en la mayoría de ocasiones, pero a veces puede llegar a resultar tedioso, sobre todo cuando tenemos un archivo HTML con demasiados elementos que funcionen como contenedores. En esos casos CSS grid es muy conveniente.</p>
+      <p>"CSS Grid layout contiene funciones de diseño dirigidas a los desarrolladores de aplicaciones web. El CSS grid se puede utilizar para lograr muchos diseños diferentes. También se destaca por permitir dividir una página en áreas o regiones principales, por definir la relación en términos de tamaño, posición y capas entre partes de un control construido a partir de primitivas HTML. Al igual que las tablas, el grid layout permite a un autor alinear elementos en columnas y filas. Sin embargo, con CSS grid son posibles muchos más diseños y de forma más sencilla que con las tablas. Por ejemplo, los elementos secundarios de un contenedor de cuadrícula podrían posicionarse para que se solapen y se superpongan, de forma similar a los elementos posicionados en CSS." - referencia en <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout">MDN</a>.</p>
+      <h3>2.3 Propiedades de reciente incorporación</h3>
     </section><br>
 
     <section id="imagenes">

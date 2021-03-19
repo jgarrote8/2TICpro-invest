@@ -58,6 +58,11 @@
       span.italic{
           font-style:italic;
       }
+      section.index a{
+        color: black;
+        text-decoration: none;
+        line-height: 2;
+      }
   </style>
 </head>
 <body>
@@ -67,7 +72,22 @@
     <p style="text-align: center; line-height: normal;">2º Bachillerato científico.</p>
     <p style="text-align: center; line-height: normal;">Manuel N.</p>    
     <p style="text-align: center; line-height: normal;">25 de febrero, 2021</p>
-    <section style="margin-top: 50px;">
+    <section class="index" style="margin-top: 50px;">
+        <h1>Índice</h1>
+        <ol>
+            <li><a href="#resumen">Resumen</a></li>
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#objetivos">Objetivos y metodología</a></li>
+            <li><a href="#resultados">Resultados y discusión</a></li>
+            <li><a href="#conclusiones">Conclusiones</a></li>
+            <li><a href="#bibliografia">Bibliografía</a></li>
+        </ol>
+    </section>
+    <section id="resumen">
+        <h1>Resumen</h1>
+        <p><span style="text-decoration: underline;">Palabras clave:</span> eje intestino-cerebro, microbiota, alimentación</p>
+    </section>
+    <section id="introduccion">
         <h1>Introducción</h1>
         <p>En los últimos años la producción científica acerca de la microbiota y su relación con
             diversas enfermedades se ha disparado, hecho que se ha observado también entre las
@@ -136,7 +156,16 @@
                 encuentra la alimentación, que parece ser clave en la prevención de enfermedades
                 anteriormente mencionadas.</p>
     </section>
-    <section>
+    <section id="objetivos">
+        <h1>Objetivos y metodología</h1>
+    </section>
+    <section id="resultados">
+        <h1>Resultados y discusión</h1>
+    </section>
+    <section id="conclusiones">
+        <h1>Conclusiones</h1>
+    </section>
+    <section id="bibliografía">
         <h1>Bibliografía</h1>
         <ol>
             <li id="bib-1">Castillo Álvarez, F., & Marzo Sola, M. E. (21 de Julio de 2019). <span class="italic">Papel de la microbiota

@@ -66,10 +66,10 @@
         <h2>Índice</h2>
         1. <a href="#lenguajes-programacion" style="color: black;">Lenguajes de programación utilizados</a><br>
         2. <a href="#propiedades-destacadas"style="color: black;">Propiedades a destacar utilizadas en esta página</a><br>
-        3. <a href="#"style="color: black;">Cumplimiento de los estándares de rendimiento</a><br>
+        3. <a href="#rendimiento"style="color: black;">Cumplimiento de los estándares de rendimiento</a><br>
         4. <a href="#imagenes"style="color: black;">Optimización de imágenes</a><br>
         5. <a href="#adaptacion"style="color: black;">Adaptación a cualquier dispositivo</a><br>
-        6. <a href="#" style="color: black;">Marcado especial, motores de búsqueda y accesibilidad</a>
+        6. <a href="#marcado" style="color: black;">Marcado especial, motores de búsqueda y accesibilidad</a>
     </div>
     <section id="lenguajes-programacion">
         <h2>1. Lenguajes de programación utilizados</h2>
@@ -159,14 +159,97 @@
     <h3>2.2 CSS Grid</h3>
       <p>Flexbox es muy ventajoso en la mayoría de ocasiones, pero a veces puede llegar a resultar tedioso, sobre todo cuando tenemos un archivo HTML con demasiados elementos que funcionen como contenedores. En esos casos CSS grid es muy conveniente.</p>
       <p>"CSS Grid layout contiene funciones de diseño dirigidas a los desarrolladores de aplicaciones web. El CSS grid se puede utilizar para lograr muchos diseños diferentes. También se destaca por permitir dividir una página en áreas o regiones principales, por definir la relación en términos de tamaño, posición y capas entre partes de un control construido a partir de primitivas HTML. Al igual que las tablas, el grid layout permite a un autor alinear elementos en columnas y filas. Sin embargo, con CSS grid son posibles muchos más diseños y de forma más sencilla que con las tablas. Por ejemplo, los elementos secundarios de un contenedor de cuadrícula podrían posicionarse para que se solapen y se superpongan, de forma similar a los elementos posicionados en CSS." - referencia en <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout">MDN</a>.</p>
+      <p>Para ver cómo CSS grid facilita el trabajo vamos a ver un ejemplo más abajo. Pongamos que necesitamos crear un contenedor principal que contenga 6 contenedores hijos en su interior (todos siendo elementos div). De entre los elementos hijos, queremos que la primera caja ocupe todo el ancho disponible (100% del contenedor padre), la segunda y la tercera caja que ocupen la mitad del ancho disponible (50% del contenedor padre cada una) y las 3 cajas restantes deben ocupar 50%, 25% y 25% respectivamente <strong>y en su misma fila</strong>. Además queremos que queden distribuidas verticalmente así: 1 div-2 div-3 div. Si lo hiciérmos con Flexbox no habría una manera de que estos elementos ocuparan siempre la posición que le corresponde sin escribir mucho más código y sin crear cajas adicionales para cada fila dentro del grid. Observa el ejemplo abajo:</p>
+      <p>Primero creamos los divs con texto en su interior. Aún no hemos escrito el CSS que va a posicionar los elementos. Ten en cuenta que cada caja es independiente pero no existe ningún margen entre ellas.</p>
+        <div style="color:white; background-color: #3498db; box-sizing: border-box; padding: 30px;">
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt;">Caja 1</div>
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt;">Caja 2</div>
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt;">Caja 3</div>
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt;">Caja 4</div>
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt;">Caja 5</div>
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt;">Caja 6</div>
+        </div>
+      <p>Esto sucedería si hiciésemos el grid usando Flexbox:</p>
+      <div style="color:white; background-color: #3498db; box-sizing: border-box; padding: 30px; display: flex; flex-flow: row wrap; justify-content: space-between;">
+        <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; flex: 100%; margin: 10px;">Caja 1</div>
+        <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; flex: 50%; margin: 10px;">Caja 2</div>
+        <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; flex: 50%; margin: 10px;">Caja 3</div>
+        <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; flex: 30vw; margin: 10px;">Caja 4</div>
+        <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; flex: 30vw; margin: 10px;">Caja 5</div>
+        <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; flex: 30vw; margin: 10px;">Caja 6</div>
+      </div>
+      <p>Como se ve en el ejemplo, no hemos obtenido el resultado deseado. Los elementos no se encuentran distribuidos verticalmente quedando en cada línea 1, 2 y 3 elementos respectivamente. Además de eso, podríamos pensar que en las últimas 3 cajas podemos utilizar un ancho porcentual que utilice como referencia el ancho de la página, pero este tomará como referencia <strong>el ancho del contenedor padre</strong>, y es con Flexbox no se puede redimensionar un elemento nada más que utilizando como referencia al elemento padre, tampoco las propiedades de float con display:block. Volviendo al ejemplo, el efecto que queremos conseguir se puede lograr o bien creando más cajas con display: flex (sería una por cada línea o fila de la "tabla") o utilizando CSS grid. Además hay que tener en cuenta que no llegaremos a conseguir un ancho exacto a menos que utilicemos Javascript, por lo que en realidad ninguna propiedad de CSS puede hacer esto de manera fácil aunque CSS grid se le acerca mucho (más detalles en <a href="https://dev.to/kenbellows/why-we-need-css-subgrid-53mh">dev.to</a>).</p>
+      <p>Vamos a usar CSS grid para posicionar los elementos. Primero vamos a definir nuestro grid (distribución parecida a una tabla). Tendrá 3 filas y 4 columnas (aunque luego solo aparecerán 3 columnas en la última fila). Usamos las siguientes propiedades de CSS para el contenedor padre:</p>
+        <div style="display: flex; flex-flow: column nowrap; justify-content: space-around; background-color: lightgrey; box-sizing: border-box; padding: 10px 20px; line-height: 0.2;">
+        <p>div{</p>
+        <p> &nbsp; display: grid;</p>
+        <p> &nbsp; grid-template-columns: repeat(4, 25%);</p>
+        <p> &nbsp; grid-template-rows: 20vh auto auto;</p>
+        <p>}</p>
+        </div><br>
+
+        <div style="color:white; background-color: #3498db; box-sizing: border-box; padding: 30px; display: grid; grid-template-columns: repeat(4, 25%); grid-template-rows: 20vh auto auto;">
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px;">Caja 1</div>
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px;">Caja 2</div>
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px;">Caja 3</div>
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px;">Caja 4</div>
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px;">Caja 5</div>
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px;">Caja 6</div>
+        </div>
+        <p>Aunque hemos definido que hay 3 filas y 4 columnas, solamente se llenan 2 filas. ¿Por qué sucede esto? Porque las cajas en el interior por defecto solo ocupan 1 cuadrícula de la tabla y no tenemos más elementos para llenar las dos últimas filas. Vamos a cambiar esto definiendo la posición de cada caja. <strong>No estamos definiendo el ancho de los contenedores hijos solo su posición en el contenedor padre.</strong> Esto también es una ventaja con respecto a Flexbox u otros layouts, ya que podemos reordenar las cajas usando CSS a nuestro antojo y es más útil aún cuando utilizamos Javascript, ya que solo habría que inyectar código CSS para cambiar la posición de los elementos como queramos.</p>
+        <p>A continuación se muestran como ejemplos el CSS de la caja 1, la caja 3 y la caja 6:</p>
+          <div style="display: flex; flex-flow: column nowrap; justify-content: space-around; background-color: lightgrey; box-sizing: border-box; padding: 10px 20px; line-height: 0.2;">
+            <p>div div.caja-1{</p>
+            <p> &nbsp; grid-row: 1 / 2;</p>
+            <p> &nbsp; grid-column: 1 / 5;</p>
+            <p>}</p>
+            </div><br>
+            <div style="display: flex; flex-flow: column nowrap; justify-content: space-around; background-color: lightgrey; box-sizing: border-box; padding: 10px 20px; line-height: 0.2;">
+              <p>div div.caja-3{</p>
+              <p> &nbsp; grid-row: 2 / 3;</p>
+              <p> &nbsp; grid-column: 3 / 5;</p>
+              <p>}</p>
+              </div><br>
+              <div style="display: flex; flex-flow: column nowrap; justify-content: space-around; background-color: lightgrey; box-sizing: border-box; padding: 10px 20px; line-height: 0.2;">
+                <p>div div.caja-6{</p>
+                <br><br>
+                <p>}</p>
+                </div><br>
+        <p>La caja 1 toma todas las posiciones en las columnas y la primera fila. La caja 3 toma 2 posiciones en las columnas y una en las filas. La caja 6 toma una posición en las columnas y otra en las filas. Observa como en la caja 6 no ha hecho falta escribir código para posicionarla en el grid, y es por que no hace falta que le demos los valores que ya tienen por defecto (ocupar una "celda" en el grid). Así es como se vería:</p>
+
+          <div style="color: white; background-color: #3498db; box-sizing: border-box; padding: 30px; display: grid; grid-template-columns: repeat(4, 25%); grid-template-rows: 20vh auto auto;">
+            <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px; grid-row: 1 / 2; grid-column: 1 / 5;">Caja 1</div>
+            <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px; grid-row: 2 / 3; grid-column: 1 / 3;">Caja 2</div>
+            <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px; grid-row: 2 / 3; grid-column: 3 / 5;">Caja 3</div>
+            <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px; grid-row: 3 / 4; grid-column: 1 / 3;">Caja 4</div>
+            <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px; grid-row: 3 / 4; grid-column: 3 / 4;">Caja 5</div>
+            <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px;">Caja 6</div>
+          </div>
+        <p>Acabamos de obtener una plantilla muy sencilla de programar y que además se va a adaptar a cualquier dispositivo sin perder la posición de sus elementos. Prueba a redimensionar la ventana del navegador para comprobarlo. Es más, acabamos de construir una plantilla básica para un sitio web en la que solo faltaría añadir el contenido:</p>
+        <div style="color: white; background-color: #3498db; box-sizing: border-box; padding: 30px; display: grid; grid-template-columns: repeat(4, 25%); grid-template-rows: 20vh auto auto;">
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px; grid-row: 1 / 2; grid-column: 1 / 5;">Logo y menú</div>
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px; grid-row: 2 / 3; grid-column: 1 / 3;">Título de la sección</div>
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px; grid-row: 2 / 3; grid-column: 3 / 5;">Barra lateral</div>
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px; grid-row: 3 / 4; grid-column: 1 / 3;">Contenido <br><span style="font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque adipisci natus, sapiente praesentium iste excepturi commodi recusandae, est asperiores voluptatem mollitia, eius ipsam libero impedit nisi provident laborum! Saepe, enim.</span><br><br><span style="font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque adipisci natus, sapiente praesentium iste excepturi commodi recusandae, est asperiores voluptatem mollitia, eius ipsam libero impedit nisi provident laborum! Saepe, enim.</span></div>
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px; grid-row: 3 / 4; grid-column: 3 / 4;">Caja 5</div>
+          <div style="box-sizing: border-box; padding: 15px; background-color: #34495e; font-size: 15pt; margin: 10px;">Caja 6</div>
+        </div>
+
       <h3>2.3 Propiedades de reciente incorporación</h3>
+      <p>En esta página web se han utilizado propiedades de reciente incorporación y también experimentales. Por eso a día de hoy muchas de ellas no son compatibles con todos los navegadores o dispositivos, es por eso que además se han tenido que utilizar otras técnicas para evitar que los dispositivos no compatibles con estas características puedan seguir viendo la web correctamente (esto se trata más adelante en el <a href="#adaptacion">apartado 5</a>). Algunas de las propiedades nuevas (en el momento de escribir esta página) son <a href="https://caniuse.com/css-subgrid">subgrid</a>, <a href="https://caniuse.com/srcset">el atributo srcset</a>, <a href="https://caniuse.com/mdn-css_at-rules_page_size">@page size</a>, <a href="https://caniuse.com/mdn-css_at-rules_page_size">Flexbox gap property</a> o <a href="https://caniuse.com/css-math-functions">ciertas funciones matemáticas para tamaños</a>. Otras no son compatibles aún con ningún navegador al estar en fase experimental, como <a href="https://caniuse.com/mdn-css_at-rules_media_scan">@media scan</a>. Además en la página se incorporan formatos de última generación para las imágenes (ver <a href="#imagenes">apartado 4</a>).</p>
     </section><br>
+
+    <section id="rendimiento">
+      <h2>3. Cumplimiento de los estándares de rendimiento</h2>
+      <p>Pese a que es bastante fácil acceder a cualquier contenido en la red, no es tan fácil encontrar algo entre la inmensidad de contenidos que hay en internet y es por eso que siempre solemos recurrir a un motor de búsqueda (como Google o Bing). Los motores de búsqueda indexarán todo el contenido que esté en internet <strong>a menos que manualmente se indique lo contrario</strong>. Sin embargo, los resultados de búsqueda se ordenan siguiendo una serie de parámetros que seleccionan resultados de calidad y adecuados a cada usuario. Es más, existe toda una profesión dedicada a estudiar cómo mejorar los resultados de búsqueda de los sitios web en los buscadores: especialistas en SEO.</p>
+      <p>Sobre todo a la hora de crear una web para una empresa, sería beneficioso que apareciese en las primeras páginas de los resultados de Google para atraer a más visitas y por tanto a mas clientes. De entre los aspectos que la inteligencia artificial del buscador de Google tiene en cuenta algunos de ellos son la estructura y el contenido de la página, la velocidad de carga, la adaptación del contenido a las palabras clave, etc (más información sobre cómo funciona la búsqueda de Google en <a href="https://developers.google.com/search/docs/beginner/how-search-works?hl=es-419">su guía de SEO</a>). Por eso, además de utilizar algunas metaetiquetas (<a href="#marcado">apartado 6</a>) también debemos mejorar el rendimiento de la página lo máximo posible para que Google la considere óptima. </p>
+    </section>
 
     <section id="imagenes">
         <h2>4. Optimización de imágenes</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi a iure distinctio molestiae necessitatibus, vitae deleniti obcaecati modi, praesentium alias rem, tenetur provident quas repellat libero ducimus error dolorum veritatis..</p>
         <h3>4.1 Atributos srcset y etiqueta picture</h3>
-        <p>Para maximizar la compatibilidad del sitio web en todos los navegadores, versiones y sistemas operativos se han utilizado dos métodos: el atributo "srcset" en las etiquetas clásicas de imagen (una propiedad más actual y avanzada que también tiene otras funciones distintas) y la etiqueta "picture" (solo en imagenes muy concretas que siempre mantendrán el mismo tamaño en todos los dispositivos) </p>
+        <p>Para maximizar la compatibilidad del sitio web en todos los navegadores, versiones y sistemas operativos en lo que respecta a las imágenes se han utilizado dos métodos: el atributo "srcset" en las etiquetas clásicas de imagen (una propiedad más actual y avanzada que también tiene otras funciones distintas) y la etiqueta "picture" (solo en imagenes muy concretas que siempre mantendrán el mismo tamaño en todos los dispositivos). </p>
         <h3>4.2 Compresión de imágenes</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, a provident maiores sint voluptate corporis accusantium architecto quas suscipit, molestias nesciunt iusto vero, nostrum error quidem nemo consectetur! Voluptates, neque.</p>
         <h3>4.3 Formatos de imagen a la última</h3>
@@ -175,7 +258,7 @@
 
     <section id="adaptacion">
       <h2>5. Adaptación a cualquier dispositivo</h2>
-      <p>En la actualidad la mayoría del tráfico web pasa por un dispositivo móvil. Es más, existen multitud de dispositivos con características muy diversas (dimensiones de pantalla, dispositivos de entrada, resolución, sistemas operativos, velocidad de acceso a internet...). Por esta razón es fundamental adaptar un sitio o aplicación web para que funcione correctamente en cualquier dispositivo. Para logralo, en este sitio web se han utilizado las siguientes propiedades: </p>
+      <p>En la actualidad la mayoría del tráfico web pasa por un dispositivo móvil. Es más, existen multitud de dispositivos con características muy diversas (dimensiones de pantalla, dispositivos de entrada, resolución, sistemas operativos, velocidad de acceso a internet...). Por esta razón es fundamental adaptar un sitio o aplicación web para que funcione correctamente en cualquier dispositivo y/o navegador. Para logralo, en este sitio web se han utilizado las siguientes propiedades: </p>
       <h3>5.1 Flexbox</h3>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam recusandae qui ab enim, incidunt soluta sequi dolores excepturi eos! Quidem eligendi quas quae dolores eos odit fugiat accusantium doloribus mollitia.</p>
       <h3>5.2 @media (media queries)</h3>
@@ -192,7 +275,9 @@
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla in voluptates rerum expedita perferendis repellat, quibusdam unde ipsam voluptatum fugit illum eum nisi delectus fuga, nobis, voluptate eius corrupti nam.</p>
       <h4>5.2.6 @supports...</h4>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, magni cumque. Ab veniam dolore expedita tenetur modi nisi placeat consequatur eius adipisci id eaque quaerat mollitia corrupti, excepturi aliquam sed!</p>
-      <h3>5.3 Modernizr</h3>
+      <h3>5.3 Tamaños dinámicos</h3>
+      <p>(...) Funciones clamp, min, max..</p>
+      <h3>5.4 Modernizr</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, vitae? Facere sit tempora fuga minima repudiandae quis labore vel officiis blanditiis, beatae sapiente quaerat ex porro exercitationem odio eum est!</p>
     </section><br>
 

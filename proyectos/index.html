@@ -66,10 +66,33 @@
           display: block;
           text-align: center;   
       }
-      div.nav-proyectos a div img{
-          width: 90%;
-          margin: 0 auto;
+
+      div.nav-proyectos a div div{
+        width: 70%;
+        margin: 0 auto;
+        height: 35vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
       }
+      
+        div.bgimg-1{
+          background: url('../img/aditivos.jpg');
+          background: url('../img/aditivos.webp');
+        }
+        div.bgimg-2{
+          background: url('../img/microbiota.jpg');
+          background: url('../img/microbiota.webp');
+        }
+        div.bgimg-3{
+          background: url('../img/religion.jpg');
+          background: url('../img/religion.webp');
+        }
+        div.bgimg-4{
+          background: url('../img/musica.jpg');
+          background: url('../img/musica.webp');
+        }
+
       @media screen and (max-width: 767px){
           div.nav-proyectos{
               flex-flow: column nowrap;
@@ -106,10 +129,18 @@
         </nav>
     </header>
     <div class="nav-proyectos">
-        <a href="1/index.html"><div><h1>Aditivos alimentarios</h1><img src="../img/microbiota.jpg" alt="aditivos"><br><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quisquam, rerum cupiditate laboriosam sequi asperiores deserunt dolorem dolor similique eaque ratione eos architecto voluptates quis! Obcaecati a optio libero doloremque.</p></div></a>
-        <a href="2/index.html"><div><h1>El eje intestino-cerebro</h1><img src="../img/microbiota.jpg" alt="microbiota"><br><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quisquam, rerum cupiditate laboriosam sequi asperiores deserunt dolorem dolor similique eaque ratione eos architecto voluptates quis! Obcaecati a optio libero doloremque.</p></div></a>
-        <a href="3/index.html"><div><h1>Religión</h1><img src="../img/microbiota.jpg" alt="religión"><br><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quisquam, rerum cupiditate laboriosam sequi asperiores deserunt dolorem dolor similique eaque ratione eos architecto voluptates quis! Obcaecati a optio libero doloremque.</p></div></a>
-        <a href="4/index.html"><div><h1>Música</h1><img src="../img/microbiota.jpg" alt="música"><br><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quisquam, rerum cupiditate laboriosam sequi asperiores deserunt dolorem dolor similique eaque ratione eos architecto voluptates quis! Obcaecati a optio libero doloremque.</p></div></a>
+        <a href="1/index.html"><div><h1>Aditivos alimentarios</h1>
+          <div class="bgimg-1"></div>
+          <br><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quisquam, rerum cupiditate laboriosam sequi asperiores deserunt dolorem dolor similique eaque ratione eos architecto voluptates quis! Obcaecati a optio libero doloremque.</p></div></a>
+        <a href="2/index.html"><div><h1>El eje intestino-cerebro</h1>
+          <div class="bgimg-2"></div>
+          <br><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quisquam, rerum cupiditate laboriosam sequi asperiores deserunt dolorem dolor similique eaque ratione eos architecto voluptates quis! Obcaecati a optio libero doloremque.</p></div></a>
+        <a href="3/index.html"><div><h1>Religión</h1>
+          <div class="bgimg-3"></div>
+          <br><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quisquam, rerum cupiditate laboriosam sequi asperiores deserunt dolorem dolor similique eaque ratione eos architecto voluptates quis! Obcaecati a optio libero doloremque.</p></div></a>
+        <a href="4/index.html"><div><h1>Música</h1>
+          <div class="bgimg-4"></div>
+          <br><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quisquam, rerum cupiditate laboriosam sequi asperiores deserunt dolorem dolor similique eaque ratione eos architecto voluptates quis! Obcaecati a optio libero doloremque.</p></div></a>
     </div>
 
     <footer>

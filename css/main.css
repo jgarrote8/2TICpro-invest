@@ -594,12 +594,14 @@ div.random {
 
 /* Fondos de div.proyectos */
 div.proyectos>div:last-child a div.random {
-  background: url('https://images.unsplash.com/photo-1433622070098-754fdf81c929?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fG11c2ljJTIwYmFja2dyb3VuZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+  background: url('../img/musica.jpg');
+  background: url('../img/musica.webp');
   background-size: cover;
 }
 
 div.proyectos>div:last-child a div.aditivos {
-  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQPz5NbDNALm1Kwur1NlCNMBgXCe8fqiL-Bvg&usqp=CAU');
+  background: url('../img/aditivos.jpg');
+  background: url('../img/aditivos.webp');
   background-size: cover;
 }
 
@@ -610,7 +612,8 @@ div.proyectos>div:last-child a div.intestino {
 }
 
 div.proyectos>div:last-child a div.religion {
-  background: url('https://www.infobae.com/new-resizer/KbjdliLsjjawKjzW-W4llM5WLeM=/1200x900/filters:format(jpg):quality(85)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2016/11/30164101/Religion-1920-2.jpg');
+  background: url('../img/religion.jpg');
+  background: url('../img/religion.webp');
   background-size: cover;
 }
 

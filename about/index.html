@@ -242,22 +242,38 @@
     <section id="rendimiento">
       <h2>3. Cumplimiento de los estándares de rendimiento</h2>
       <picture>
-        <!-- <source srcset="img/html-css-js.avif" type="image/avif"> -->
             <source srcset="img/google.webp" type="image/webp">                    
         <img src="img/google.jpg" alt="imagen usando la etiqueta picture para los formatos AVIF, WebP y PNG." style="float: left; margin: 0 15px 15px 0; max-width: 200px;">
     </picture>
       <p>Pese a que es bastante fácil acceder a cualquier contenido en la red, no es tan fácil encontrar algo entre la inmensidad de contenidos que hay en internet y es por eso que siempre solemos recurrir a un motor de búsqueda (como Google o Bing). Los motores de búsqueda indexarán todo el contenido que esté en internet <strong>a menos que manualmente se indique lo contrario</strong>. Sin embargo, los resultados de búsqueda se ordenan siguiendo una serie de parámetros que seleccionan resultados de calidad y adecuados a cada usuario. Es más, existe toda una profesión dedicada a estudiar cómo mejorar los resultados de búsqueda de los sitios web en los buscadores: especialistas en SEO.</p>
       <p>Sobre todo a la hora de crear una web para una empresa, sería beneficioso que apareciese en las primeras páginas de los resultados de Google para atraer a más visitas y por tanto a mas clientes. De entre los aspectos que la inteligencia artificial del buscador de Google tiene en cuenta algunos de ellos son la estructura y el contenido de la página, la velocidad de carga, la adaptación del contenido a las palabras clave, etc (más información sobre cómo funciona la búsqueda de Google en <a href="https://developers.google.com/search/docs/beginner/how-search-works?hl=es-419">su guía de SEO</a>). Por eso, además de utilizar algunas metaetiquetas (<a href="#marcado">apartado 6</a>) también debemos mejorar el rendimiento de la página lo máximo posible para que Google la considere óptima. </p>
+      <p>Es recomendable seguir las directrices de contenido de Google para ganar tráfico al sitio web. Además, entre estas directrices se encuentran algunas que premian a los sitios web que utilizan las funcionalidades más nuevas de los distintos lenguajes de programación, nuevos formatos de archivo, compatibilidad con nuevos estándares (como los asistentes por voz) o lo que tienen compatibilidad con los resultados de búsqueda enriquecidos, funciones de accesibilidad, integraciones nativas en dispositivos móviles, etc. </p> 
+      <p>Para comprobar el rendimiento del sitio como si lo revisara un robot de Google se ha utilizado la <a href="https://developers.google.com/speed/docs/insights/v5/get-started?utm_source=lh-chrome-ext">API de PageSpeed Insights</a> integrada en Lighthouse. Después de haber subido todos los archivos del sitio web a un servidor de prueba, se procedió a utilizar Lighthouse. Estos son los resultados de que se obtuvieron a partir de la página principal:</p>
+
+      <div style="display: flex; width: 100%; justify-content: center; align-items: center;">
+        <picture style="margin: 0 auto;">
+          <source srcset="img/lighthouse.avif" type="image/avif">
+          <source srcset="img/lighthouse-webp" type="image/webp">
+          <img src="img/lighthouse.png" alt="lighthouse report" style="width: 100%; max-width: 941px;">
+        </picture>
+      </div>
+
+      <p>Pese a que la puntuación podría mejorar, es óptima para los usuarios con los dispositivos creados hasta la fecha en la que se hizo la consulta.</p>
+
+      <p>Las incorporaciones al sitio web que fueron necesarias para mejorar este resultado se encuentran descritas en las secciones posteriores a esta.</p>
     </section>
 
     <section id="imagenes">
         <h2>4. Optimización de imágenes</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi a iure distinctio molestiae necessitatibus, vitae deleniti obcaecati modi, praesentium alias rem, tenetur provident quas repellat libero ducimus error dolorum veritatis..</p>
-        <h3>4.1 Atributos srcset y etiqueta picture</h3>
-        <p>Para maximizar la compatibilidad del sitio web en todos los navegadores, versiones y sistemas operativos en lo que respecta a las imágenes se han utilizado dos métodos: el atributo "srcset" en las etiquetas clásicas de imagen (una propiedad más actual y avanzada que también tiene otras funciones distintas) y la etiqueta "picture" (solo en imagenes muy concretas que siempre mantendrán el mismo tamaño en todos los dispositivos). </p>
-        <h3>4.2 Compresión de imágenes</h3>
+        <p>Los archivos multimedia están presente en la mayoría de sitios web. Hay que tener en cuenta que representan un peso importante en el tiempo total de carga de cualquier sitio web. Es por eso que hay que optimizarlos al máximo para hacer que la web cargue lo antes posible, sin perder calidad. Además estos archivos deben ser compatibles con todos los dispositivos desde los que se visualicen y el formato en el que se guarden es crucial para ello. En este sitio web solamente se han utilizado imágenes y para optimizarlas se han tratado tres aspectos:</p>
+        <h3>4.1 Aspectos a tratar en el código: atributos srcset y etiqueta picture</h3>
+        <p>En el código HTML y CSS se han utilizado propiedades específicamente dedicadas a maximizar la compatibilidad de las imágenes y también reducir la velocidad de carga. Además, algunos aspectos básicos como el tamaño que se defina en el código CSS o las políticas de caché eficientes también influyen. Dos propiedades destacadas son el atributo srcet y la etiqueta picture, ambas de HTML.</p>
+        <p>El atributo srcset es bastante útil y se puede utilizar de distintas maneras según la etiqueta a la que complemente o el valor que se le de (más allá de las rutas de imagen). Por ejemplo, se puede utilizar como atributo en las etiquetas img para enlazar imágenes de distintos tamaños que se cargarán en función del tamaño y resolución de pantalla ahorrando así recursos. Si lo usamos de la manera anteriormente mencionada, también se podrá especificar de dos formas distintas, ya sea indicando el ancho o las ampliaciones de una imagen con respecto a la original (<a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/img#ejemplo_3_uso_del_atributo_srcset">Ejemplo 1</a> // <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/img#ejemplo_4_uso_de_atributos_srcset_y_sizes">Ejemplo 2</a>).</p>
+        <p>Por otro lado el atributo srcet también se utiliza dentro de las etiquetas picture. Las etiquetas picture están solamente dedicadas a servir una imagen en distintos formatos para maximizar la compatibilidad. En muchas ocasiones el atributo srcet ese mucho más práctico, ya que también puede proporcionar las imágenes según la compatiblidad del navegador con el formato (además de según el ancho de pantalla).</p>
+        <p>El uso de estos atributos es una de las tantas cosas que un usuario común no aprecia a simple vista, pese a que son pequeños granos de arena que contribuyen a optimizar el rendimiento de la página que finalmente se aprecia. Puedes comprobar en las imágenes que hay en esta misma página cómo si la abres en una pestaña nueva aparece la imagen en el formato más conveniente que soporta tu dispositivo y navegador.</p>
+        <h3>4.2 Aspectos a tratar en el tamaño de archivos: compresión de imágenes</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, a provident maiores sint voluptate corporis accusantium architecto quas suscipit, molestias nesciunt iusto vero, nostrum error quidem nemo consectetur! Voluptates, neque.</p>
-        <h3>4.3 Formatos de imagen a la última</h3>
+        <h3>4.3 Aspectos a tratar en la extensión de archivos: formatos multimedia de última generación</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas illo obcaecati qui dolores sed odit rerum harum quia praesentium possimus accusantium reiciendis laboriosam, delectus eius deserunt ipsum. Est, reiciendis quisquam?</p>
     </section><br>
 

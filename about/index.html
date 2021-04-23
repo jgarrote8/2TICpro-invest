@@ -4,13 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Sobre la página</title>
-  <meta name="description" content="">
+  <meta name="description" content="Información sobre cómo se ha desarrollado este sitio web para la asignatura de TIC indicando varias técnicas que se han utiliado y que destacan por ser buenas prácticas.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
   
 
   <link rel="manifest" href="../site.webmanifest">
@@ -41,6 +36,35 @@
         background-color: grey;
         color: white;
         transition: 300ms ease;
+    }
+    div.mediaexample1{
+      display: flex;
+      flex-flow: row nowrap;
+      width: 70%;
+      margin: 0 auto;
+      background-color: black;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 20px;
+      text-align: center;
+    }
+    @media screen and (max-width: 768px){
+      div.mediaexample1 span.mobile{
+        display: inline;
+      }
+      div.mediaexample1 span.desktop{
+        display: none;
+      }
+    }
+    @media screen and (min-width: 769px){
+      div.mediaexample1 span.mobile{
+        display: none;
+      }
+      div.mediaexample1 span.desktop{
+        display: inline;
+      }
     }
   </style>
 </head>
@@ -272,44 +296,65 @@
         <p>Por otro lado el atributo srcet también se utiliza dentro de las etiquetas picture. Las etiquetas picture están solamente dedicadas a servir una imagen en distintos formatos para maximizar la compatibilidad. En muchas ocasiones el atributo srcet ese mucho más práctico, ya que también puede proporcionar las imágenes según la compatiblidad del navegador con el formato (además de según el ancho de pantalla).</p>
         <p>El uso de estos atributos es una de las tantas cosas que un usuario común no aprecia a simple vista, pese a que son pequeños granos de arena que contribuyen a optimizar el rendimiento de la página que finalmente se aprecia. Puedes comprobar en las imágenes que hay en esta misma página cómo si la abres en una pestaña nueva aparece la imagen en el formato más conveniente que soporta tu dispositivo y navegador.</p>
         <h3>4.2 Aspectos a tratar en el tamaño de archivos: compresión de imágenes</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, a provident maiores sint voluptate corporis accusantium architecto quas suscipit, molestias nesciunt iusto vero, nostrum error quidem nemo consectetur! Voluptates, neque.</p>
+        <p>Las imágenes suelen ser bastante pesadas en multitud de ocasiones. Esto puede afectar a la velocidad de carga de una página web, siendo uno de los principales factores por los que una página web carga lentamente. A esto se le suma la gran cantidad de imágenes que pueden llegar a coexistir en una misma página. Es por eso que es muy conveniente comprimir las imágenes pesadas en formatos que no tengan una compresión óptima por si mismos.</p>
+        <p>Las imágenes de esta página web en formatos jpg, png, jpeg 2000 y gif se han comprimido aproximadamente un 60% produciéndose una mejora significativa en la velocidad de carga de la pagina.</p>
         <h3>4.3 Aspectos a tratar en la extensión de archivos: formatos multimedia de última generación</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas illo obcaecati qui dolores sed odit rerum harum quia praesentium possimus accusantium reiciendis laboriosam, delectus eius deserunt ipsum. Est, reiciendis quisquam?</p>
+        <p>Pese a que en el apartado anterior se menciona que las imágenes en los formatos más convencionales se han comprimido para mejorar la velocidad es carga, es muy probable que las imágenes que estés viendo ahora mismo en tu navegador no sean las extensiones de imagen que se han comprimido. </p>
+        <p>Como ya se ha mencionado, todas las imágenes de esta página contienen fuentes alternativas para cada imagen única utilizando el atributo srcset o la etiqueta picture. Esto significa que por cada imagen que existe en la página existen al menos 2 copias idénticas pero con distintas extensiones de imagen. ¿Y por qué hacer eso cuando sería mucho más fácil subir el formato más óptimo? La respuesta tiene que ver con la compatibilidad entre dispositivos y navegadores. Las extensiones de imagen están ordenadas por orden de prioridad y el navegador va a mostrar la extensión de imagen que se encuentre más arriba en ese orden de prioridad y que a la vez sea compatible con el dispositivo y/o navegador. </p>
+        <p>Las extensiones clásicas como los jpg o png comunes no darán problemas, pero sí podrán dar problemas otros formatos de imagen como WebP, AVIF o Jpeg XL. Utilizamos estas extensiones de última generación porque tienen mejores perfiles de <strong>compresión</strong>, así la misma imagen con la misma calidad ocupará mucho menos en WebP que en jpg.</p>
+        <p>Las imágenes del sitio tienen este orden jerárquico:</p>
+        <ol>
+          <li>AVIF: imágenes estáticas o dinámicas. 50% menor en tamaño con la misma calidad con respecto a WebP y aproximadamente un 66% menor que jpg. Soportado para el 63% de los usuarios (<a href="https://caniuse.com/avif">ver soporte actualizado</a>).</li><br>
+          <li>WebP (v1): soporta compresión sin o con pérdida. Aproximadamente 30% menor en tamaño con la misma calidad con respecto a jpg o png. Soportado para el 90% de los usuarios (<a href="https://caniuse.com/webp">ver soporte actualizado</a>). Optimizado para Chrome al estar desarrollado por Google. No se utiliza la versión 2 de WebP que es inestable a día de hoy.</li><br>
+          <li>JPG y PNG: Soportados en todos los navegadores a excepción de algunas características concretas en algunos navegadores antiguos (como la transparencia PNG o los APNG). No confundir con JPEG 2000 (solo soportado en Safari) o JPEG XL (un formato muy reciente que aún no está soportado en ningún navegador y compite con AVIF). Es posible que en el futuro próximo JPEG XL gane popularidad por tener más versatilidad que AVIF pero con el mismo perfil de compresión (<a href="https://caniuse.com/jpegxl">ver soporte actualizado</a>).</li>
+        </ol>
+        
+        <p>De esta manera el 100% de usuarios a esta web verán todas las imágenes correctamente, el 90% verá imágenes optimizadas en WebP y el 63% verá imágenes en AVIF de última generación. </p>
     </section><br>
 
     <section id="adaptacion">
       <h2>5. Adaptación a cualquier dispositivo</h2>
       <p>En la actualidad la mayoría del tráfico web pasa por un dispositivo móvil. Es más, existen multitud de dispositivos con características muy diversas (dimensiones de pantalla, dispositivos de entrada, resolución, sistemas operativos, velocidad de acceso a internet...). Por esta razón es fundamental adaptar un sitio o aplicación web para que funcione correctamente en cualquier dispositivo y/o navegador. Para logralo, en este sitio web se han utilizado las siguientes propiedades: </p>
       <h3>5.1 Flexbox</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam recusandae qui ab enim, incidunt soluta sequi dolores excepturi eos! Quidem eligendi quas quae dolores eos odit fugiat accusantium doloribus mollitia.</p>
+      <p>Ya se ha hablado de flexbox en apartados anteriores. Son precisamente las facilidades que este layout da a la hora de cambiar la distribución de los elementos y redimensionarlos las principales ventajas en cuanto a adaptación a dispositivos de cualquier tipo.</p>
       <h3>5.2 @media (media queries)</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda perferendis veniam qui tenetur, obcaecati perspiciatis minus fugiat? Cum, asperiores. Soluta harum deleniti dolores eligendi ex incidunt nisi. Ex, nostrum tempore?</p>
+      <p>"Las media queries le permiten adaptar su sitio o aplicación dependiendo de la presencia o el valor de varias características y parámetros del dispositivo. Son un componente clave del responsive design. Por ejemplo, una consulta de medios puede reducir el tamaño de la fuente en dispositivos pequeños, aumentar el relleno entre párrafos cuando se ve una página en modo vertical, o aumentar el tamaño de los botones en las pantallas táctiles." -  <a href="https://developer.mozilla.org/es/docs/Web/CSS/Media_Queries">referencia en MDN</a>.</p>
+      <p>Se han utilizado una gran cantidad de media queries en este sitio web. Esencialmente, las propiedades CSS que van definidas entre media queries solo se van a aplicar a los dispositivos que cumplan con los requisitos que se definen. Estos requisitos pueden ser un ancho determinado, la disponibilidad de un ratón, la orientación de un dispositivo móvil, la resolución, el color, etc.</p>
       <h4>5.2.1 @media screen and width...</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab maxime distinctio unde labore nemo, officia esse deleniti dolore est aspernatur. At hic est impedit! Sit similique doloremque commodi nesciunt dolorum.</p>
+      <p>Las propiedades que suceden a esta at-rule van a afectar solamente a los dispositivos que tengan un ancho definido en el rango que se establece en esta media query. Son las más comunes ya que conociendo el ancho de pantalla podemos programar propiedades distintas para dispositivos móviles. Los teléfonos móviles tendrán un ancho mucho menor que el de una pantalla de escritorio.</p>
+      <p>Puedes observar el ejemplo de abajo. En este caso aparece desde que dispositivo estás viendo esta página basándose en el ancho de la pantalla del navegador. Si estás en un ordenador minimiza la pantalla del navegador y observa como el texto cambia al alcanzar cierto ancho de ventana. </p>
+      <div class="mediaexample1">
+        <span class="desktop">Estás viendo esto desde un ordenador de escritorio.</span>
+        <span class="mobile">Estás viendo esto desde un dispositivo móvil (incluyendo tabletas).</span>
+      </div>
       <h4>5.2.2 @media print...</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, doloremque ipsum omnis magnam temporibus perspiciatis optio corrupti nisi alias excepturi odio rem asperiores molestiae blanditiis tempora laborum aliquam, dolorem libero?</p>
+      <p>Con @media print podemos cambiar la apariencia de la página para adaptarla al formato de impresión. Esto es, al hacer clic en imprimir desde el navegador la página que aparecerá en formato impresión estará condicionada por las propiedades que sucedan a @media print. Además también se pueden complementar estas propiedades con las más recientes bajo la @page at-rule (con compatibilidad limitada en estos momentos).</p>
       <h4>5.2.3 @media (orientation...</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptates unde obcaecati saepe modi mollitia eum quam esse nam. Blanditiis repellendus deserunt temporibus ipsum quo sint, animi dicta sequi quaerat.</p>
+      <p>Detecta la orientación del dispositivo en función de la relación de píxeles entre ancho y alto. Es decir: si se detecta por ejemplo unas medidas de 500px (w) x 1000px (h) (ratio 1:2) entonces se determinará que el dispositivo tiene una orientación vertical. Si se quiere obtener la información exacta de la orientación de un dispositivo móvil sería necesario utilizar javascript u otros lenguajes de programación.</p>
       <h4>5.2.4 @media (pointer...</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sequi accusantium veritatis facilis fugit molestiae enim impedit deserunt fuga. Consequuntur delectus iusto incidunt quae consectetur. Ut perspiciatis sed eveniet reprehenderit!</p>
+      <p>Detecta la presencia de un ratón o cursor, su ausencia o si este cursor es de precisión limitada. Esto es de mucha utilidad por ejemplo a la hora de hacer botones que se puedan pulsar con facilidad en las pantallas táctiles.</p>
       <h4>5.2.5 @media (hover...</h4>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla in voluptates rerum expedita perferendis repellat, quibusdam unde ipsam voluptatum fugit illum eum nisi delectus fuga, nobis, voluptate eius corrupti nam.</p>
+      <p>Detecta si el dispositivo es compatible con los efectos hover.</p>
       <h4>5.2.6 @supports...</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, magni cumque. Ab veniam dolore expedita tenetur modi nisi placeat consequatur eius adipisci id eaque quaerat mollitia corrupti, excepturi aliquam sed!</p>
+      <p>"@supports otorga la habilidad de realizar consultas que comprueben si ciertas funcionalidades están disponibles (feature query)." - <a href="https://developer.mozilla.org/es/docs/Web/CSS/@supports">referencia en MDN</a>.</p>
+      <p>El navegador devuelve datos sobre si soporta determinada propiedad de CSS o no y podemos definir acciones para adaptar el contenido en consecuencia.</p>
       <h3>5.3 Tamaños dinámicos</h3>
-      <p>(...) Funciones clamp, min, max..</p>
+      <p>Al diseñar para todos los dispositivos es muy importante tener en cuenta que hay que utilizar tamaños relativos para que la página web se visualice correctamente y la experiencia de usuario sea óptima. Generalmente esto se puede conseguir con valores porcentuales (%), valores con respecto al ancho o alto de la ventana (vh, vw) o variables de CSS (--var).</p>
+      <p>Sin embargo, a veces puede resultar complicado, ya que aunque los tamaños son relativos es probable que no deseemos que, por ejemplo, los márgenes de la página tomen el valor de 5% en todos los dispositivos (porque sería un gran espacio para las pantallas 4K y un espacio mínimo para los dispositivos móviles). Es por eso que existen funciones matemáticas que podemos utilizar al definir el tamaño de los elementos.</p>
+      <p>En esta página web se han utilizado bastante, empezando por los propios márgenes de la página que ahora mismo estás viendo. Si estás en un ordenador redimensiona la pantalla para comprobar que los márgenes no se adaptan de manera consistente. Eso es porque el tamaño de los márgenes está condicionado por una función clamp(). Más información sobre estas funciones en <a href="https://web.dev/min-max-clamp/">web.dev</a>.</p>
       <h3>5.4 Modernizr</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, vitae? Facere sit tempora fuga minima repudiandae quis labore vel officiis blanditiis, beatae sapiente quaerat ex porro exercitationem odio eum est!</p>
+      <p>Modernizr es una de las librerías que se han utilizado para este proyecto y tiene un funcionamiento similar al de @supports en CSS, con la diferencia de que también funciona para Javascript y además tiene una compatibilidad del 100% con todos los dispositivos (es paradójico que @supports no funcione en algunos navegadores cuando es una propiedad diseñada para aumentar la compatibilidad). </p>
     </section><br>
 
     <section id="marcado">
       <h2>6. Marcado especial, motores de búsqueda y accesibilidad</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et non error dolores dicta, aliquam dolor consequuntur similique impedit quasi labore reiciendis in itaque exercitationem quam ipsam atque earum. Eaque, accusamus!</p>
+      <p>Ya se ha mencionado la importancia del SEO, por eso es necesario facilitar el trabajo a los buscadores como Google para aportar la mayor información posible y aparecer en los resultados de búsqueda (incluyendo los de búsqueda enriquecida).</p>
       <h3>6.1 Marcado especial de las páginas</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur repellendus fugit eos hic doloribus, debitis nemo nobis laborum. Repellat voluptatum non ab alias delectus excepturi magni sapiente sint optio aliquid!</p>
+      <p>Los artículos científicos se han marcado con microdatos siguiendo las indicaciones para publicaciones académicas de <a href="https://schema.org/ScholarlyArticle">schema.org</a>.</p>
       <h3>6.2 Metaetiquetas de Open Graph (meta:og)</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore magnam inventore maxime quo quidem molestias, minus alias rem aliquam a molestiae sapiente nam dolorem sed repellat itaque natus! Blanditiis, alias.</p>
+      <p>En algunas páginas se han utilizado las etiquetas de Open Graph para modificar los metadatos que aparecen al compartir alguna de las páginas en redes sociales. Más información sobre el <a href="https://ogp.me/">protocolo Open Graph</a> creado por Facebook.</p>
       <h3>6.3 Velocidad de carga de la página</h3>
+      <p>Se han seguido varias indicaciones de web.dev para mejorar la velocidad de carga de la página hasta llegar al tiempo recomendado. Más información sobre la velocidad de carga en <a href="https://web.dev/fast/">web.dev</a>.</p>
     </section>
 
     <footer>

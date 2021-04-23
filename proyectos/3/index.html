@@ -1,1 +1,110 @@
+<!doctype html>
+<html class="no-js" lang="es">
 
+<head>
+  <meta charset="utf-8">
+  <title>La religión</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="../../icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <script src="https://kit.fontawesome.com/64ba0acf7d.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../../css/normalize.css">
+  <link rel="stylesheet" href="../../css/main.css">
+
+  <meta name="theme-color" content="#3ba83b">
+
+  <style>
+      div.actions{
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+      }
+
+      div.actions a{
+          text-decoration: none;
+          background-color: black;
+          color: white;
+          flex: 25%;
+          text-align: center;
+          box-sizing: border-box;
+          padding: 15px 10px;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+      }
+    @media (hover: hover){
+        div.actions a:hover{
+            background-color: white;
+            color: black;
+            transition: 700ms ease;
+        }
+    }
+    @media screen and (max-width: 425px){
+        div.actions{
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+        div.actions a{
+            flex: 50%;
+        }
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <span class="logo"><img srcset="../../img/logo.png 145w, ../../img/logo.webp 145w" sizes="65px" alt="logo"
+          style="box-sizing: border-box; padding: 0 15px 0 0;">Proyecto de investigación</span>
+          <nav>
+              <a href="../../index.html">Inicio</a>
+              <a href="../../index.html#info">Asignatura</a>
+              <a href="../../index.html#proyectos">Proyectos</a>
+          </nav>
+      </header>
+
+      <h1>La religión</h1>
+
+      <!--Marcar según https://schema.org/Article-->
+      <div class="actions">
+          <a href="3.pdf"><i class="fas fa-file-pdf"></i> PDF</a>
+          <a href="#"><i class="fas fa-file-powerpoint"></i> Presentación</a>
+      </div>
+
+      <div class="details" itemscope itemtype="https://schema.org/ScholarlyArticle">
+          <p><strong>Título del proyecto:</strong> <span itemprop="name">La religión</span></p>
+          <p><strong>Autor:</strong> <span itemprop="author">Violeta M.</span></p>
+          <p><strong>Revisado por:</strong> <span itemprop="contributor">Manuel N.</span></p>
+          <p><strong>Fecha de publicación:</strong> <meta itemprop="datePublished" content="2021-04-14"><span>14 de abril, 2021</span></p>
+          <p><strong>Formato del trabajo:</strong> APA, <span itemprop="educationalUse">TFG (Trabajo de fin de grado)</span></p>
+          <!--Poner enlace dela publicación--><p><strong>Enlace de la publicación:</strong> <a href="#" itemprop="sameAs">iesmjuancalero.educarex.es/proyecto-investigacion/proyectos/3/3.pdf</a></p><br>
+          <h2>Resumen (abstract):</h2>
+          <p><meta itemprop="inLanguage" content="es-ES"><span itemprop="abstract">--*Texto*</span></p>
+      </div>
+
+      <footer>
+        <div>
+          <p>Página web creada en la asignatura de "Tecnologías de la información y la comunicación (TIC)" por Javier Garrote. Asignatura impartida por Mariló Anaya durante el curso 2020/21 en el IES Maestro Juan Calero.</p>
+            
+          <p>La asignatura sobre la que se habla en la web es "Proyecto de investigación", que puede cursarse en 2º de bachillerato en ambas modalidades.</p>
+        </div>
+        <div>
+          <h1 style="font-size:1.17em;">Más información:</h1>
+          <nav>
+            - <a href="../../about/index.html">¿Cómo se ha hecho esta página?</a><br><br>
+            - <a href="../../folleto.pdf">Folleto informativo de la asignatura "Proyecto de investigación"</a><br><br>
+            - <a href="https://iesmjuancalero.educarex.es/index.php/departamentos/88889017-uncategorised/122-departamento-de-biologisa-y-geologisa">Criterios de calificación y programación de esta asignatura (dentro del departamento de biología)</a><br><br>
+            - <a href="../../about/creditos.html">Créditos: imágenes e iconos</a>
+          </nav>
+        </div>
+      </footer>
+</body>
+</html>

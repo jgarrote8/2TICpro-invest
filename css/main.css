@@ -596,24 +596,28 @@ div.random {
 div.proyectos>div:last-child a div.random {
   background: url('../img/musica.jpg');
   background: url('../img/musica.webp');
+  background: url('../img/musica.avif');
   background-size: cover;
 }
 
 div.proyectos>div:last-child a div.aditivos {
   background: url('../img/aditivos.jpg');
   background: url('../img/aditivos.webp');
+  background: url('../img/aditivos.avif');
   background-size: cover;
 }
 
 div.proyectos>div:last-child a div.intestino {
-  background: url('../img/microbiota.jpg');
+  background: url('../img/microbiota.png');
   background: url('../img/microbiota.webp');
+  background: url('../img/microbiota.avif');
   background-size: cover;
 }
 
 div.proyectos>div:last-child a div.religion {
-  background: url('../img/religion.jpg');
+  background: url('../img/religion.png');
   background: url('../img/religion.webp');
+  background: url('../img/religion.avif');
   background-size: cover;
 }
 

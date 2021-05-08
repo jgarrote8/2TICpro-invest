@@ -593,31 +593,43 @@ div.random {
 }
 
 /* Fondos de div.proyectos */
-div.proyectos>div:last-child a div.random {
+.no-webp div.proyectos>div:last-child a div.random {
   background: url('../img/musica.jpg');
+  background-size: cover;
+}
+
+.webp div.proyectos>div:last-child a div.random{
   background: url('../img/musica.webp');
-  background: url('../img/musica.avif');
   background-size: cover;
 }
 
-div.proyectos>div:last-child a div.aditivos {
+.no-webp div.proyectos>div:last-child a div.aditivos {
   background: url('../img/aditivos.jpg');
+  background-size: cover;
+}
+
+.webp div.proyectos>div:last-child a div.aditivos{
   background: url('../img/aditivos.webp');
-  background: url('../img/aditivos.avif');
   background-size: cover;
 }
 
-div.proyectos>div:last-child a div.intestino {
+.no-webp div.proyectos>div:last-child a div.intestino {
   background: url('../img/microbiota.png');
-  background: url('../img/microbiota.webp');
-  background: url('../img/microbiota.avif');
   background-size: cover;
 }
 
-div.proyectos>div:last-child a div.religion {
+.webp div.proyectos>div:last-child a div.intestino{
+  background: url('../img/microbiota.webp');
+  background-size: cover;
+}
+
+.no-webp div.proyectos>div:last-child a div.religion {
   background: url('../img/religion.png');
+  background-size: cover;
+}
+
+.webp div.proyectos>div:last-child a div.religion{
   background: url('../img/religion.webp');
-  background: url('../img/religion.avif');
   background-size: cover;
 }
 

@@ -16,6 +16,7 @@
   <!-- Place favicon.ico in the root directory -->
 
   <script src="https://kit.fontawesome.com/64ba0acf7d.js" crossorigin="anonymous"></script>
+  <script src="../js/vendor/modernizr-custom.js"></script>
 
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/main.css">
@@ -65,33 +66,37 @@
       }
 
       div.nav-proyectos a div div{
-        width: 70%;
-        margin: 0 auto;
-        height: 35vh;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        width: 70%!important;
+        margin: 0 auto!important;
+        height: 35vh!important;
+        background-position: center!important;
+        background-size: cover!important;
+        background-repeat: no-repeat!important;
       }
       
-        div.bgimg-1{
+        .no-webp div.bgimg-1{
           background: url('../img/aditivos.jpg');
+        }
+        .webp div.bgimg-1{
           background: url('../img/aditivos.webp');
-          background: url('../img/aditivos.avif');
         }
-        div.bgimg-2{
+        .no-webp div.bgimg-2{
           background: url('../img/microbiota.png');
+        }
+        .webp div.bgimg-2{
           background: url('../img/microbiota.webp');
-          background: url('../img/microbiota.avif');
         }
-        div.bgimg-3{
+        .no-webp div.bgimg-3{
           background: url('../img/religion.png');
-          background: url('../img/religion.webp');
-          background: url('../img/religion.avif');
         }
-        div.bgimg-4{
+        .webp div.bgimg-3{
+          background: url('../img/religion.webp');
+        }
+        .no-webp div.bgimg-4{
           background: url('../img/musica.jpg');
+        }
+        .webp div.bgimg-4{
           background: url('../img/musica.webp');
-          background: url('../img/musica.avif');
         }
 
       @media screen and (max-width: 767px){
@@ -162,7 +167,6 @@
       </footer>
     <span class="print-alert">Esta página no está adaptada al formato impresión, por eso no puede imprimirse.</span>
       <!--Fin del contenido-->
-  <script src="../js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="../js/plugins.js"></script>
   <script src="../js/main.js"></script>
 </body>
